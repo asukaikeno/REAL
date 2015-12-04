@@ -1,0 +1,26 @@
+<% provide(:title, "Timeline") %>
+
+<h1>タイムライン</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spot.each do |spot| %>
+      <tr>
+        <td><%= spot.title %></td>
+        <td><%= spot.place %></td>
+        <td><%= image_tag spot.picture.url if spot.picture? %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
