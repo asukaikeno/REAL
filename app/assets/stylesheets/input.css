@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/* -------------------- */
+/* ▼メニューバーの作成 */
+/* -------------------- */
+#menubar {
+   /* ▼ページの上部一杯に固定する */
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   /* ▼背景を白色にして40％ほど透過させる */
+   background-color: #2a2a2a; /* ←背景色 */
+   opacity: 1;            /* ←不透明度 */
+   /* ▼メニューを真ん中に寄せる */
+   text-align: right;
+    z-index:10;
+}
+
+#menubar ul {
+   /* ▼余計な余白を削除 */
+   margin: 0px;
+   padding: 15px;
+   /* ▼リストの先頭記号を削除 */
+   list-style-type: none;
+}
+/* ------------------------------ */
+/* ▼メニュー項目(ボックス)の作成 */
+/* ------------------------------ */
+#menubar ul li {
+   font-size: 20px;   /* メニューの文字サイズ */
+   line-height: 1.0;  /* メニューの行高 */
+   display: inline-block; /* 各項目を横方向に並べる */
+   *display:inline; *zoom:1; /* 上記のIE7対策 */
+}
+/* ---------------------------- */
+/* ▼メニュー項目(リンク)の装飾 */
+/* ---------------------------- */
+#menubar ul li a {
+   text-decoration: none;  /* リンクの下線を消す */
+   display: block;
+   padding: 0px 0.5em;     /* 左右に余白を設ける */
+   color:#fff;            /* リンクの文字色 */
+font-family:'ヒラギノ角ゴ';
+    
+}
+#menubar ul li a:hover {
+   /* ▼リンクの上にマウスが載った際に装飾を変更 */
+   background-color:white;
+   color:#373776;
+}
+
+#ue{height:70px;}
+#kyori{height:23px;}
+#kannsou{opacity: 1;/* ←不透明度 */
+height:80px}
+
+body{background:#322d33;
+    color: #fff;
+}
+
+.title_rogo{text-align: center;
+}
+
+.picture_input{
+text-align:center}
+
+.picture_input2{width:100px;height:100px;background:#bebebe;margin-left:auto;margin-right:auto;display:inline-block;margin-bottom:5px;}
+
+.icon_plus{line-height:100px;}
+
