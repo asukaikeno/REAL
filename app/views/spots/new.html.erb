@@ -27,22 +27,19 @@
             <div class="form-group">
                 <br>
                 <label for="name1"><%= f.label :title, "タイトル" %></label>
-                <%= f.text_field :title, class: "form-control", placeholder: "店名・場所の名前" %>
+                <%= f.text_field :title, class: "form-control", placeholder: "店名・場所の名前", %>
             </div>
              <div class="form-group">
                 <label for="name1"><%= f.label :place, "位置情報" %></label>
                 <%= f.text_field :place, class: "form-control", placeholder: "◯◯駅から歩いて◯分" %>
             </div>
             
-            <div class="picture_input">
-            <div class="picture_input2"><a href="#"><span class="glyphicon glyphicon-plus icon_plus"></a></span>  </div>
-            <div class="picture_input2"><a href="#"><span class="glyphicon glyphicon-plus icon_plus"></a></span></div>
-            </div>
-            
-            <div class="picture_input">
-            <div class="picture_input2"><a href="#"><span class="glyphicon glyphicon-plus icon_plus"></a></span>  </div>
-            <div class="picture_input2"><a href="#"><span class="glyphicon glyphicon-plus icon_plus"></a></span></div>
-            </div>
+            <span class="picture">
+            <%= f.file_field :picture, :multiple => true %>
+            <%= f.file_field :picture, :multiple => true %>
+            <%= f.file_field :picture, :multiple => true %>
+            <%= f.file_field :picture, :multiple => true %>
+            </span>
         
      
             <div class="form-group">
@@ -57,22 +54,6 @@
     </div>
     
     <div class="hidden-xs col-md-4"><!--右側のdiv--></div>
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!--JavaScriptの読み込み-->
     <script src="../js/bootstrap.min.js"></script>
   </body>
