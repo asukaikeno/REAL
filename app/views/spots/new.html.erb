@@ -1,30 +1,61 @@
-<% provide(:title, "投稿") %>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% provide(:title, "投稿") %>    
+    <%= stylesheet_link_tag "input", :media => "all" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
+    </head>
+  
+ <body><!--以下ページ内容-->
+ 
+     <div id="menubar">
+       <ul class="title_rogo">
+          <li><a href="#homeP" class="scrollable">REAL</a></li>
+      </ul>
+     </div>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-  <%= form_for(@spot, html:{ multipart: true }) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
+    <div id="ue"><!--上の空白div--></div>
+    <div class="hidden-xs col-md-4"><!--左側のdiv--></div>
 
-      <%= f.label :title %>
-      <%= f.text_field :title, class: 'form-control' %>
-      
-      <%= f.text_area :content, placeholder: "感想を入力してください" %>
-
-      <%= f.label :place %>
-      <%= f.text_field :place, class: 'form-control' %>
-
-      <%= f.label :cost %>
-      <%= f.text_field :cost, class: 'form-control' %>
-
-      <%= f.label :link %>
-      <%= f.text_field :link, class: 'form-control' %>
-
-      <span class="picture">
-      <%= f.file_field :picture %>
-     </span>
-
-  <%= f.submit "投稿する", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
+    <div class="col-xs-12 col-md-4">
+            <%= form_for(@spot, html:{ multipart: true }) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <div class="form-group">
+                <br>
+                <label for="name1"><%= f.label :title, "タイトル" %></label>
+                <%= f.text_field :title, class: 'form-control', placeholder: '店名・場所の名前' %> 
+            </div>
+             <div class="form-group">
+                <label for="name1"><%= f.label :place, "位置情報" %></label>
+                <%= f.text_field :place, class: 'form-control', placeholder: '◯◯駅から歩いて◯分' %>
+            </div>
+            
+            <span class="picture">
+            <%= f.file_field :picture %>
+            <%= f.file_field :picture %>
+            <%= f.file_field :picture %>
+            <%= f.file_field :picture %>
+            </span>
+        
+     
+            <div class="form-group">
+                <label for="ask1"><%= f.label :content, 'コメント' %></label>
+                <%= f.text_area :content, rows: 5, class: 'text1' %>
+            </div>
+             <div class="form-group">
+                <label for="name1"><%= f.label :cost, '二人合わせていくらくらい？' %></label>
+                <%= f.text_field :cost, class: 'form-control' %> 
+            </div>
+      <%= f.submit "投稿する", class: "btn btn-danger btn-block" %>     
+    </div>
+    
+    <div class="hidden-xs col-md-4"><!--右側のdiv--></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!--JavaScriptの読み込み-->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+  <% end %>
+</html>
