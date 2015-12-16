@@ -1,2 +1,127 @@
-<h1>Spots#show</h1>
-<p>Find me in app/views/spots/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% provide(:title, "詳細") %> 
+    <%= stylesheet_link_tag "timeline.bootstrap", :media => "all" %>
+    <%= stylesheet_link_tag "bootstrap-glyphicons", :media => "all" %>
+    <%= stylesheet_link_tag "detail2", :media => "all" %>
+</head>
+
+<body>
+    <!--↓ヘッダー始まり-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+                <a href="#">
+                    <p id="back"><span class="glyphicon glyphicon-chevron-left"></span>戻る</p>
+                </a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;投稿</a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;マイページ</a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--↑ヘッダー終わり-->
+
+    <!--↓コンテンツ始まり-->
+    <div class="hidden-xs col-md-4">
+        <!--左のdiv-->
+    </div>
+
+    <div class="col-xs-12 col-md-4 detail_div">
+        <!--真ん中のdivスタート-->
+        <!--↓スライダー-->
+        <div id="c1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="c1" data-slide-to="0" class="active"></li>
+                <li data-target="c1" data-slide-to="1"></li>
+                <li data-target="c1" data-slide-to="2"></li>
+                <li data-target="c1" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="../pictures/basho.png">
+                </div>
+                <div class="item">
+                    <img src="../pictures/basho4.png">
+                </div>
+                <div class="item">
+                    <img src="../pictures/basho2.png">
+                </div>
+                <div class="item">
+                    <img src="../pictures/basho3.png">
+                </div>
+            </div>
+            <a class="carousel-control left" href="#c1" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+
+            <a class="carousel-control right" href="#c1" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <!--↑スライダーおわり-->
+
+        <!--詳細の白い箱-->
+        <% spot = @spot %>
+        <div class="detail1">
+            <a href="#">
+            	<%= image_tag spot.user.picture.url, class: 'user' %>
+            </a><strong><%= spot.user.name %></strong>
+
+        </div>
+
+        <div class="detail2">
+            <%= spot.content %>
+            <p class="spot"><span class="glyphicon glyphicon-map-marker"><strong><%= spot.title %></strong></p> 
+            <p class="tags"><span class="glyphicon glyphicon-tags"></span><%= spot.place %>&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span><%= spot.cost %></p>
+            <p class="time"><span class="glyphicon glyphicon-time"></span>16:25投稿</p>
+        </div>
+
+        <div class="col-xs-2 iine">
+            <button class="fav">
+                <span class="glyphicon glyphicon-heart"></span>
+            </button>
+        </div>
+        <div class="col-xs-8 form-group form">
+            <input type="text" class="form-control" placeholder="コメントを入力" id="mail">
+        </div>
+        <div class="col-xs-2 sent">
+            <div class="btn btn-danger">送信</div>
+        </div>
+
+
+        <!--真ん中のdivおわり-->
+    </div>
+
+
+
+
+    <div class="hidden-xs col-md-4">
+        <!--右側のdiv-->
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

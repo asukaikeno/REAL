@@ -36,9 +36,8 @@
     </nav>
 
 
-
-<div class="container">
   <% @spot.each do |spot| %>
+<div class="container">
   <ul class="timeline">
     <li>
       <div><a href="#"><%= image_tag spot.user.picture.url, class: 'tl-circ', alt: 'person' %></div>
@@ -56,7 +55,9 @@
              
         </div>
         <div class="tl-body">
-          <p class="text1"><%= spot.content %><small><a id="more" href="#">...続きを読む</a></small></p>
+          <p class="text1"><%= spot.content %><small>
+            <%= link_to 'Show', spot, id: 'more' %> 
+            ...続きを読む</small></p>
           <p><a href="#"><%= image_tag spot.picture.url alt: 'pic' %></a></p>
           <p><small class="text-muted">いいね!7件・コメント４件</small></p>
         </div>
