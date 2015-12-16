@@ -6,7 +6,10 @@ class Spot < ActiveRecord::Base
 
    #画像アップロード
    mount_uploader :picture, PictureUploader
-
+   mount_uploader :picture2, PictureUploader
+   mount_uploader :picture3, PictureUploader
+   mount_uploader :picture4, PictureUploader
+   
    #バリデーション
    validates :user_id, presence: true
    validates :title, presence: true
