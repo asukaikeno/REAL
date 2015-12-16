@@ -2,7 +2,7 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( input.css )
+#Rails.application.config.assets.precompile += [ 'input.css' , 'timeline.css' , 'timeline.bootstrap.css' , 'bootstrap-glyphicons.css']
 #input.cssをprecompile
 
 # Add additional assets to the asset load path
