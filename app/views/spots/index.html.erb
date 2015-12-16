@@ -56,8 +56,8 @@
         </div>
         <div class="tl-body">
           <p class="text1"><%= spot.content %><small>
-            <%= link_to 'Show', spot, id: 'more' %> 
-            ...続きを読む</small></p>
+            <%= link_to "続きを読む", spot, :action => "show",  id: 'more' %> 
+            </small></p>
           <p><a href="#"><%= image_tag spot.picture.url alt: 'pic' %></a></p>
           <p><small class="text-muted">いいね!7件・コメント４件</small></p>
         </div>
