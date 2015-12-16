@@ -34,12 +34,14 @@
                 <%= f.text_field :place, class: 'form-control', placeholder: '◯◯駅から歩いて◯分' %>
             </div>
             
-            <span class="picture">
-            <%= f.file_field :picture  %>
-            <%= f.file_field :picture2 %>
-            <%= f.file_field :picture3 %>
-            <%= f.file_field :picture4 %>
-            </span>
+            <div class="picture">
+              <p class="post_picture">写真</p>  
+              <br>
+              <%= f.file_field :picture  %>
+              <%= f.file_field :picture2 %>
+              <%= f.file_field :picture3 %>
+              <%= f.file_field :picture4 %>
+            </div>
         
      
             <div class="form-group">
@@ -50,7 +52,9 @@
                 <label for="name1"><%= f.label :cost, '二人合わせていくらくらい？' %></label>
                 <%= f.text_field :cost, class: 'form-control' %> 
             </div>
-      <%= f.submit "投稿する", class: "btn btn-danger btn-block" %>     
+      <div class="submit_button">
+        <%= f.submit "投稿する", class: "btn btn-danger btn-block" %>     
+      </div>
     </div>
     
     <div class="hidden-xs col-md-4"><!--右側のdiv--></div>

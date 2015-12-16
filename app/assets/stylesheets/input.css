@@ -50,7 +50,7 @@ font-family:'ヒラギノ角ゴ';
    color:#373776;
 }
 
-#ue{height:70px;}
+#ue{height:17px;}
 #kyori{height:23px;}
 #kannsou{opacity: 1;/* ←不透明度 */
 height:80px}
@@ -73,3 +73,58 @@ text-align:center}
 color: #322d33;
 }
 
+
+#spot_picture{
+  width:221px;
+  height:100px;
+  background:#777777;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+#spot_picture2{width:221px;
+  height:100px;
+  background:#777777;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+#spot_picture3{
+  width:221px;
+  height:100px;
+  background:#777777;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+#spot_picture4{
+  width:221px;
+  height:100px;
+  background:#777777;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+.post_picture{
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.picture{
+  margin-bottom: 5px; 
+}
+
+.submit_button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
