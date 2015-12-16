@@ -1,0 +1,86 @@
+body {
+    background: #322d33;
+    padding-top: 50px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:action {
+    text-decoration: none;
+}
+#back {
+    line-height: 50px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    color: #fff;
+    font-size: 15px;
+}
+#c1 {
+    margin-top: 10px;
+}
+.detail1 {
+    background: #F5F5F5;
+}
+.user {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin: 5px;
+    vertical-align: middle;
+}
+.detail2 {
+    background: #F5F5F5;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.time {
+    text-align: right;
+    color: #777;
+    padding-top: 2px;
+}
+.tags {
+    margin: 0px;
+     color: #777;
+}
+.spot {
+    margin: 0px;
+    font-size: 18px;
+    color: #FF6860;
+}
+.iine {
+    background: #F5F5F5;
+}
+button.fav {
+    background-color: #F5F5F5;
+    border-style: none;
+    outline: none;
+    font-size: 30px;
+    padding: 0px;
+}
+button.fav:hover {
+    color: #FF6860;
+}
+.form {
+    background: #F5F5F5;
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+.sent {
+    background: #F5F5F5;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
