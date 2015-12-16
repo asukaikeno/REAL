@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'login'    => 'sessions#new'
   post 'login'   => 'sessions#create'
+
+  post 'new'     => 'spots#index'
   
   delete 'logout'=> 'sessions#destroy'
 
