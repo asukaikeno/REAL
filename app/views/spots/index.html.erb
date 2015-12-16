@@ -1,26 +1,69 @@
-<% provide(:title, "Timeline") %>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>REAL</title>
+  <meta name="author" content="Jake Rocheleau">
+  <%= stylesheet_link_tag "timeline.bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap-glyphicons", :media => "all" %>
+  <%= stylesheet_link_tag "timeline", :media => "all" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <% provide(:title, "Timeline") %>
 
-<h1>タイムライン</h1>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div  class="navbar-header"><!--ヘッダー-->
+               <button class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+                   <div class="logo">
+                    <a href="#">
+                      <%= image_tag("logo3.png", :class => "logo", :alt => "logo") %>
+                    </a>
+                    </div>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;投稿</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;マイページ</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;問い合わせ</a></li>
+            </ul>
+           </div> 
+        </div>
+    </nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>タイトル</th>
-      <th></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @spot.each do |spot| %>
-      <tr>
-        <td><%= spot.title %></td>
-        <td><%= spot.place %></td>
-        <td><%= image_tag spot.picture.url if spot.picture? %></td>
+
+<div class="container">
+  <% @spot.each do |spot| %>
+  <ul class="timeline">
+    <li>
+      <div><a href="#"><%= image_tag spot.user.picture.url, class: 'tl-circ', alt: 'person' %></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+            <div class="honey">
+              <h4><span class="glyphicon glyphicon-map-marker"><%= spot.title %></h4>
+            </div>
+            <div class="fav">
+              <button class="fav"><h2><span class="glyphicon glyphicon-heart"></span></a></h2></button>
+            </div>
         
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+          <p><small class="text-muted"><span class="glyphicon glyphicon-user"></span><a id="username" href="#"><%= spot.user.name %></a>&nbsp;&nbsp;&nbsp;
+         <span class="glyphicon glyphicon-time"></span>16:20に投稿</small></p>
+             
+        </div>
+        <div class="tl-body">
+          <p class="text1"><%= spot.content %><small><a id="more" href="#">...続きを読む</a></small></p>
+          <p><a href="#"><%= image_tag spot.picture.url alt: 'pic' %></a></p>
+          <p><small class="text-muted">いいね!7件・コメント４件</small></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<% end %>
+</body>
+</html>
