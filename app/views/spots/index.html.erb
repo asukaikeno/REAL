@@ -39,7 +39,7 @@
   <% @spot.each do |spot| %>
 <div class="container">
   <ul class="timeline">
-    <li>
+    <li class="<%= cycle("", "timeline-inverted") -%>">
       <div><a href="#"><%= image_tag spot.user.picture.url, class: 'tl-circ', alt: 'person' %></div>
       <div class="timeline-panel">
         <div class="tl-heading">
@@ -65,6 +65,7 @@
     </li>
   </ul>
 </div>
+
 <% end %>
 </body>
 </html>
